@@ -1,0 +1,17 @@
+{
+  "name": "england",
+  "version": "1.0.0",
+  "description": "List of current england players",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Connor Adamsons, Jacob Smith",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

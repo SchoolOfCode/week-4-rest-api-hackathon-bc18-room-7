@@ -1,0 +1,209 @@
+[
+    {
+      "firstName": "Jordan",
+      "lastName": "Pickford",
+      "position": "Goalkeeper",
+      "preferredFoot": "Right",
+      "currentClub": "Everton FC",
+      "dob": "7th March 1994 (30 years old)",
+      "shirtNumber": "1"
+    },
+    {
+      "firstName": "Kyle",
+      "lastName": "Walker",
+      "position": "Defender",
+      "preferredFoot": "Right",
+      "currentClub": "Manchester City FC",
+      "dob": "28th May 1990 (34 years old)",
+      "shirtNumber": "2"
+    },
+    {
+      "firstName": "Luke",
+      "lastName": "Shaw",
+      "position": "Defender",
+      "preferredFoot": "Left",
+      "currentClub": "Manchester United FC",
+      "dob": "12th July 1995 (29 years old)",
+      "shirtNumber": "3"
+    },
+    {
+      "firstName": "Declan",
+      "lastName": "Rice",
+      "position": "Midfielder",
+      "preferredFoot": "Right",
+      "currentClub": "Arsenal FC",
+      "dob": "14th January 1999 (25 years old)",
+      "shirtNumber": "4"
+    },
+    {
+      "firstName": "John",
+      "lastName": "Stones",
+      "position": "Defender",
+      "preferredFoot": "Right",
+      "currentClub": "Manchester City FC",
+      "dob": "28th May 1994 (30 years old)",
+      "shirtNumber": "5"
+    },
+    {
+      "firstName": "Marc",
+      "lastName": "Guéhi",
+      "position": "Defender",
+      "preferredFoot": "Left",
+      "currentClub": "Crystal Palace FC",
+      "dob": "13th July 2000 (24 years old)",
+      "shirtNumber": "6"
+    },
+    {
+      "firstName": "Bukayo",
+      "lastName": "Saka",
+      "position": "Forward",
+      "preferredFoot": "Left",
+      "currentClub": "Arsenal FC",
+      "dob": "5th September 2001 (23 years old)",
+      "shirtNumber": "7"
+    },
+    {
+      "firstName": "Trent",
+      "lastName": "Alexander-Arnold",
+      "position": "Defender",
+      "preferredFoot": "Right",
+      "currentClub": "Liverpool FC",
+      "dob": "7th October 1998 (26 years old)",
+      "shirtNumber": "8"
+    },
+    {
+      "firstName": "Harry",
+      "lastName": "Kane",
+      "position": "Forward",
+      "preferredFoot": "Right",
+      "currentClub": "Bayern Munich",
+      "dob": "28th July 1993 (31 years old)",
+      "shirtNumber": "9"
+    },
+    {
+      "firstName": "Jude",
+      "lastName": "Bellingham",
+      "position": "Midfielder",
+      "preferredFoot": "Right",
+      "currentClub": "Real Madrid CF",
+      "dob": "29th June 2003 (21 years old)",
+      "shirtNumber": "10"
+    },
+    {
+      "firstName": "Phil",
+      "lastName": "Foden",
+      "position": "Midfielder",
+      "preferredFoot": "Left",
+      "currentClub": "Manchester City FC",
+      "dob": "28th May 2000 (24 years old)",
+      "shirtNumber": "11"
+    },
+    {
+      "firstName": "Kieran",
+      "lastName": "Trippier",
+      "position": "Defender",
+      "preferredFoot": "Right",
+      "currentClub": "Newcastle United FC",
+      "dob": "19th September 1990 (34 years old)",
+      "shirtNumber": "12"
+    },
+    {
+      "firstName": "Aaron",
+      "lastName": "Ramsdale",
+      "position": "Goalkeeper",
+      "preferredFoot": "Right",
+      "currentClub": "Arsenal FC",
+      "dob": "14th May 1998 (26 years old)",
+      "shirtNumber": "13"
+    },
+    {
+      "firstName": "Ezri",
+      "lastName": "Konsa",
+      "position": "Defender",
+      "preferredFoot": "Right",
+      "currentClub": "Aston Villa FC",
+      "dob": "23rd October 1997 (27 years old)",
+      "shirtNumber": "14"
+    },
+    {
+      "firstName": "Lewis",
+      "lastName": "Dunk",
+      "position": "Defender",
+      "preferredFoot": "Left",
+      "currentClub": "Brighton & Hove Albion FC",
+      "dob": "21st November 1991 (33 years old)",
+      "shirtNumber": "15"
+    },
+    {
+      "firstName": "Conor",
+      "lastName": "Gallagher",
+      "position": "Midfielder",
+      "preferredFoot": "Right",
+      "currentClub": "Chelsea FC",
+      "dob": "6th February 2000 (24 years old)",
+      "shirtNumber": "16"
+    },
+    {
+      "firstName": "Ivan",
+      "lastName": "Toney",
+      "position": "Forward",
+      "preferredFoot": "Right",
+      "currentClub": "Brentford FC",
+      "dob": "16th March 1996 (28 years old)",
+      "shirtNumber": "17"
+    },
+    {
+      "firstName": "Anthony",
+      "lastName": "Gordon",
+      "position": "Forward",
+      "preferredFoot": "Right",
+      "currentClub": "Newcastle United FC",
+      "dob": "24th February 2001 (23 years old)",
+      "shirtNumber": "18"
+    },
+    {
+      "firstName": "Ollie",
+      "lastName": "Watkins",
+      "position": "Forward",
+      "preferredFoot": "Right",
+      "currentClub": "Aston Villa FC",
+      "dob": "30th December 1995 (28 years old)",
+      "shirtNumber": "19"
+    },
+    {
+      "firstName": "Jarrod",
+      "lastName": "Bowen",
+      "position": "Forward",
+      "preferredFoot": "Left",
+      "currentClub": "West Ham United FC",
+      "dob": "20th December 1996 (27 years old)",
+      "shirtNumber": "20"
+    },
+    {
+      "firstName": "Morgan",
+      "lastName": "Rogers",
+      "position": "Forward",
+      "preferredFoot": "Right",
+      "currentClub": "Manchester City FC",
+      "dob": "26th July 2002 (22 years old)",
+      "shirtNumber": "21"
+    },
+    {
+      "firstName": "Raheem",
+      "lastName": "Sterling",
+      "position": "Forward",
+      "preferredFoot": "Right",
+      "currentClub": "Chelsea FC",
+      "dob": "8th December 1994 (30 years old)",
+      "shirtNumber": "22"
+    },
+    {
+      "firstName": "Callum",
+      "lastName": "Wilson",
+      "position": "Forward",
+      "preferredFoot": "Right",
+      "currentClub": "Newcastle United FC",
+      "dob": "27th February 1992 (32 years old)",
+      "shirtNumber": "23"
+    }
+  ]
