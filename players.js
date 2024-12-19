@@ -15,9 +15,28 @@ export async function getPlayerByShirtNumber(shirtNumber) {
 
 export async function createPlayer(newPlayer) {
   const players = await readPlayers();
-players.push(newPlayer);
+  players.push(newPlayer);
 
-await writePlayers(players);
+  await writePlayers(players);
 
-return newPlayer;
+  return newPlayer;
+}
+
+async function findPlayerIndexByShirtNumber(shirtNumber) {
+  const players = await readPlayers();
+  return players.findIndex(({ shirtNumber: sn }) => sn === shirtNumber); //extract the shirtNumber property from the player object and assign it to a new variable called sn
+}
+
+export async function deletePlayerByShirtNumber(shirtNumber) {
+  const players = await readPlayers(); // Ensure you're getting the latest list of players
+  const index = await findPlayerIndexByShirtNumber(shirtNumber);
+
+  if (index === -1) {
+    return;
+  }
+
+  const deleted = players[index];
+  players.splice(index, 1);
+  await writePlayers(players);
+  return deleted;
 }

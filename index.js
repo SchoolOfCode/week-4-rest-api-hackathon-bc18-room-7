@@ -2,7 +2,12 @@ import express from "express";
 const app = express();
 const PORT = 3000;
 
-import { getPlayerByShirtNumber, getPlayers, createPlayer } from "./players.js";
+import {
+  getPlayerByShirtNumber,
+  getPlayers,
+  createPlayer,
+  deletePlayerByShirtNumber,
+} from "./players.js";
 
 app.use(express.json());
 
@@ -31,17 +36,38 @@ app.get("/england/:shirtNumber", async (req, res) => {
   }
 });
 
-app.post("/england", async function (req, res) {
-  const { shirtNumber } = req.body; //grab shirt number from the body
-  console.log(shirtNumber);
-  let currentPlayer = await getPlayerByShirtNumber(shirtNumber); // look up if player already exists
-  console.log(currentPlayer);
-  if (currentPlayer !== null && currentPlayer !== undefined) {
-    // if player already exists return 400 error
-    return res.status(400).send("Player already exists with this squad number");
+app.post("/england", async (req, res) => {
+  try {
+    const { shirtNumber } = req.body; //grab shirt number from the body
+    console.log(shirtNumber);
+    let currentPlayer = await getPlayerByShirtNumber(shirtNumber); // look up if player already exists
+    console.log(currentPlayer);
+    if (currentPlayer !== null && currentPlayer !== undefined) {
+      // if player already exists return 400 error
+      return res
+        .status(400)
+        .send("Player already exists with this squad number");
+    }
+    const newPlayer = await createPlayer(req.body); // else accept new number and entry
+    res.status(201).json({ Success: true, payload: newPlayer });
+  } catch (error) {
+    res.status(500).json({ Success: false, message: error.message });
   }
-  const newPlayer = await createPlayer(req.body); // else accept new number and entry
-  res.status(201).json({ Success: true, payload: newPlayer });
+});
+
+app.delete("/england/:shirtNumber", async (req, res) => {
+  try {
+    const shirtNumber = req.params.shirtNumber;
+    const deletedPlayer = await deletePlayerByShirtNumber(shirtNumber);
+    if (!deletedPlayer) {
+      return res
+        .status(404)
+        .json({ success: false, message: `Player not found` });
+    }
+    res.status(200).json({ success: true, payload: deletedPlayer });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
 });
 
 app.listen(PORT, function () {
