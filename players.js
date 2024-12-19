@@ -14,10 +14,10 @@ export async function getPlayerByShirtNumber(shirtNumber) {
 }
 
 export async function createPlayer(newPlayer) {
-  const created = {
-    ...newPlayer,
-  };
+  const players = await readPlayers();
+players.push(newPlayer);
 
-  england = [...england, created];
-  return created;
+await writePlayers(players);
+
+return newPlayer;
 }
