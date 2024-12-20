@@ -7,6 +7,7 @@ import {
   getPlayers,
   createPlayer,
   deletePlayerByShirtNumber,
+  updatePlayerByShirtNumber,
 } from "./players.js";
 
 app.use(express.json());
@@ -28,7 +29,10 @@ app.get("/england/:shirtNumber", async (req, res) => {
     const players = await getPlayerByShirtNumber(shirtNumber);
     if (!players) {
       //if player with the given shirtNumber is not found
-      return res.status(404).json({ Success: false });
+      return res.status(404).json({
+        Success: false,
+        message: "Cant find a player with that shirt number.",
+      });
     }
     res.status(200).json({ Success: true, payload: players }); //Successful GET by shirtNumber
   } catch (error) {
@@ -36,6 +40,7 @@ app.get("/england/:shirtNumber", async (req, res) => {
   }
 });
 
+//POST - Add a new player to the array
 app.post("/england", async (req, res) => {
   try {
     const { shirtNumber } = req.body; //grab shirt number from the body
@@ -55,6 +60,7 @@ app.post("/england", async (req, res) => {
   }
 });
 
+//DELETE a player based off their shirt number
 app.delete("/england/:shirtNumber", async (req, res) => {
   try {
     const shirtNumber = req.params.shirtNumber;
@@ -65,6 +71,29 @@ app.delete("/england/:shirtNumber", async (req, res) => {
         .json({ success: false, message: `Player not found` });
     }
     res.status(200).json({ success: true, payload: deletedPlayer });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+});
+
+//Edit a variable of a player based of their shirt number
+app.patch("/england/:shirtNumber", async (req, res) => {
+  try {
+    if (!req.body || Object.keys(req.body).length === 0) {
+      return res.status(400).json({ success: false });
+    }
+    const updatedPlayer = await updatePlayerByShirtNumber(
+      req.params.shirtNumber,
+      req.body
+    );
+    console.log(updatedPlayer);
+    if (!updatedPlayer) {
+      return res.status(404).json({
+        success: false,
+        message: "Cant find a player with that shirt number.",
+      });
+    }
+    res.status(200).json({ success: true, payload: updatedPlayer });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
   }

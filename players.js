@@ -40,3 +40,21 @@ export async function deletePlayerByShirtNumber(shirtNumber) {
   await writePlayers(players);
   return deleted;
 }
+
+export async function updatePlayerByShirtNumber(shirtNumber, updates) {
+  const index = await findPlayerIndexByShirtNumber(shirtNumber);
+
+  if (index === -1) {
+    return;
+  }
+
+  const players = await readPlayers();
+  const oldPlayer = players[index];
+  const updated = { ...oldPlayer, ...updates };
+
+  players[index] = updated;
+
+  await writePlayers(players);
+
+  return updated;
+}
